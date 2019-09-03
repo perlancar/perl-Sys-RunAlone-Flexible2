@@ -153,8 +153,9 @@ Sys::RunAlone::Flexible2" at compile-time like you would normally use
 Sys::RunAlone, the lock() subroutine will still be invoked at INIT phase.
 
 Aside from that, when script does not contain __DATA__ or __END__, S:R:F2 opens
-a filehandle to the script (which is basically the same thing as DATA). So you
-don't have to put __DATA__ in your script.
+a filehandle to the script (which is basically the same thing as DATA). Or, if
+you happen to use this module in a one-liner, S:R:F2 will open a filehandle to
+this module. So you don't have to put __DATA__ in your script.
 
 The rest of the documentation is Sys::RunAlone's.
 
